@@ -31,5 +31,11 @@ class GamesController < ApplicationController
       "The word you found is a valid word."
 
     end
+    @score = []
+    alphabet = ('a'..'z').to_a
+    @word.split('').each do |letter|
+      number = (alphabet.index(letter) + 1)
+      @score << number
+    end
   end
 end
