@@ -1,3 +1,11 @@
-<h1>This is the Score Page</h1>
-<h2><%= @result %></h2>
-<h3>You score is <%= @score.sum %></h3>
+<div class="testing">
+  <div class='bshadow'>
+    <h2>Your result:</h2>
+    <h2><%= @result %></h2>
+    <div class="container-box justify-content-center">
+      <% if @score.sum != 0 %>
+        <h3>Congratulation, your score is '<%= @score.sum %>'</h3>
+      <% end %>
+    </div>
+  </div>
+</div>

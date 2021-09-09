@@ -1,16 +1,16 @@
-<div class="container">
-  <h1>Find the longest word possible!</h1>
-  <div class="container-box">
-    <% @letters.each do |letter| %>
-      <div class = "box"><%= letter.to_s %></div>
-    <% end %>
+<div class="testing">
+  <div class='bshadow'>
+    <h1>Find an english word!</h1>
+    <div class="container-box">
+      <% @letters.each do |letter| %>
+        <div class = "box"><%= letter.to_s %></div>
+      <% end %>
+    </div>
+    <form action="/score" class="form-group" method='post'>
+      <input type="text" name="word" class="form-text text-muted form-control my-2" type="hidden">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letters, @letters %>
+      <input type="submit" value="Check!" class="btn btn-primary my-2 w-100">
+    </form>
   </div>
-
-  <form action="/score" class="form-group" method='post'>
-    <input type="text" name="word" class="form-text text-muted form-control" type="hidden">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <%= hidden_field_tag :letters, @letters %>
-    <input type="submit" value="Check!" class="btn btn-primary my-2 w-100">
-  </form>
-
 </div>

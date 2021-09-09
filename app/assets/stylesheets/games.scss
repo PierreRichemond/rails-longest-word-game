@@ -6,17 +6,31 @@
 //   width: 1000px;
 //   margin: 0 auto;
 // }
-.container{
-  display: center;
-}
 .container-box {
   display:flex;
+
 }
 
 .box {
   background-color: blue;
   color: white;
-  padding: 10px;
+  text-align: center;
+  width: 50px;
   margin: 0 10px;
   font-size: 24px;
+
+}
+.testing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.bshadow{
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  text-align: center;
 }
