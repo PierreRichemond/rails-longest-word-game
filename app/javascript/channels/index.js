@@ -8,7 +8,7 @@ channels.keys().forEach(channels)
 //under here
 const boxes = document.querySelectorAll('.box');
 console.log(boxes);
-NodeList.length
+NodeList.length //  = 0  why ?
 boxes.forEach((box) => box.addEventListener('click',
   (event) => {
     console.log(event)
